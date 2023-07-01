@@ -6,7 +6,7 @@ session_start();
 $judul_halaman = "Pengguna";
 
 // ==================== MENAMPILKAN HEADER ====================
-include 'layout/header.php';
+include '../../layout/header.php';
 
 // ==================== FUNGSI MENAMPILKAN DATA DARI DATABASE ====================
 $data_pengguna = select("SELECT * FROM tb_pengguna");
@@ -143,5 +143,5 @@ $data_pengguna = select("SELECT * FROM tb_pengguna");
 
 <?php
 // ==================== MENAMPILKAN FOOTER ====================
-include 'layout/footer.php';
+include '../../layout/footer.php';
 ?>

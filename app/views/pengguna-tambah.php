@@ -6,14 +6,14 @@ session_start();
 $judul_halaman = "Pengguna";
 
 // ==================== MENAMPILKAN HEADER ====================
-include 'layout/header.php';
+include '../../layout/header.php';
 
 // ==================== FUNGSI TOMBOL SIMPAN ==================== 
 if (isset($_POST['tambah'])) {
     if (tambah_pengguna($_POST) > 0) {
         $_SESSION['info'] = 'Berhasil Simpan';
         echo    "<script>
-                    document.location.href = 'pengguna-data.php';
+                    document.location.href = 'dashboard.php';
                 </script>";
     } else {
         $_SESSION['info'] = 'Gagal Simpan';
@@ -118,5 +118,5 @@ if (isset($_POST['tambah'])) {
 
 <?php
 // ==================== MENAMPILKAN FOOTER ====================
-include 'layout/footer.php';
+include '../../layout/footer.php';
 ?>

@@ -6,7 +6,7 @@ session_start();
 $judul_halaman = "Dashboard";
 
 // ==================== MENAMPILKAN HEADER ====================
-include 'layout/header.php';
+include '../../layout/header.php';
 
 // ==================== FUNGSI MENAMPILKAN DATA DARI DATABASE ====================
 $data_pengguna = mysqli_query($db, "SELECT * FROM tb_pengguna");
@@ -146,5 +146,5 @@ $jumlah_pengguna = mysqli_num_rows($data_pengguna);
 
 <?php
 // ==================== MENAMPILKAN FOOTER ====================
-include 'layout/footer.php';
+include '../../layout/footer.php';
 ?>

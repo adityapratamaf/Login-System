@@ -1,6 +1,6 @@
 <?php
 
-// ==================== SELECT / MENAMPILKAN DATA ====================
+// ======================================== SELECT / MENAMPILKAN DATA ========================================
 function select($query)
 {
     // panggil koneksi database 
@@ -15,7 +15,7 @@ function select($query)
     return $rows;
 }
 
-// ==================== PENGGUNA ====================
+// ======================================== PENGGUNA ========================================
 // Fungsi Tambah Data 
 function tambah_pengguna($POST)
 {

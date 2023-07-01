@@ -2,7 +2,7 @@
 
 session_start();
 
-include 'config/app.php';
+include '../../config/app.php';
 
 // Menerima id Yang Dipilih
 $id_pengguna = (int)$_GET['id_pengguna'];

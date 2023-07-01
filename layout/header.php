@@ -1,6 +1,6 @@
 <?php
 
-include 'config/app.php';
+include '../../config/app.php';
 
 ?>
 
@@ -10,39 +10,40 @@ include 'config/app.php';
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="admin/dist/img/AdminLTELogo.png" />
+    <link rel="icon" href="../../admin/dist/img/AdminLTELogo.png" />
     <title> <?= $judul_halaman; ?> </title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="admin/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../admin/plugins/fontawesome-free/css/all.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bootstrap 4 -->
-    <link rel="stylesheet" href="admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <link rel="stylesheet" href="../../admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
     <!-- iCheck -->
-    <link rel="stylesheet" href="admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="../../admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- JQVMap -->
-    <link rel="stylesheet" href="admin/plugins/jqvmap/jqvmap.min.css">
+    <link rel="stylesheet" href="../../admin/plugins/jqvmap/jqvmap.min.css">
     <!-- Theme Style -->
-    <link rel="stylesheet" href="admin/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="../../admin/dist/css/adminlte.min.css">
     <!-- OverlayScrollbars -->
-    <link rel="stylesheet" href="admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="admin/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../../admin/plugins/daterangepicker/daterangepicker.css">
     <!-- Summernote -->
-    <link rel="stylesheet" href="admin/plugins/summernote/summernote-bs4.min.css">
+    <link rel="stylesheet" href="../../admin/plugins/summernote/summernote-bs4.min.css">
     <!-- SweetAlert2 -->
-    <link rel="stylesheet" href="admin/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+    <link rel="stylesheet" href="../../admin/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
     <!-- Toastr -->
-    <link rel="stylesheet" href="admin/plugins/toastr/toastr.min.css">
+    <link rel="stylesheet" href="../../admin/plugins/toastr/toastr.min.css">
     <!-- DataTables -->
-    <link rel="stylesheet" href="admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-    <link rel="stylesheet" href="admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
     <!-- Select2 -->
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="../../admin/plugins/select2/css/select2.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -200,22 +201,11 @@ include 'config/app.php';
                         <i class="fas fa-user"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <a class="dropdown-item" href="pengguna-lihat.php?id_pengguna=<?= $_SESSION['id_pengguna']; ?>">Profil</a>
+                        <a class="dropdown-item" href="pengguna-lihat.php?id_pengguna=<?= $_SESSION['id_pengguna']; ?>"> <i class="fas fa-user"></i> &nbsp; Profil</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Keluar</a>
+                        <a class="dropdown-item" href="#"> <i class="nav-icon fas fa-sign-out-alt"></i> &nbsp; Keluar</a>
                     </ul>
                 </li>
-
-                <!-- <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user"></i>
-                    </button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Profil</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Keluar</a>
-                    </div>
-                </div> -->
 
                 <li class="nav-item">
                     <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
@@ -247,7 +237,7 @@ include 'config/app.php';
                     </div> -->
                     <div class="modal-footer justify-content-between">
                         <button type="button" class="btn btn-default" data-dismiss="modal"> <b>TIDAK</b> </button>
-                        <a href="logout.php" type="button" class="btn btn-primary"> <b>YA</b></a>
+                        <a href="../../logout.php" type="button" class="btn btn-primary"> <b>YA</b></a>
                     </div>
                 </div>
                 <!-- /.modal-content -->

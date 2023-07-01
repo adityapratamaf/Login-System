@@ -6,7 +6,7 @@ session_start();
 $judul_halaman = "Pengguna";
 
 // ==================== MENAMPILKAN HEADER ====================
-include 'layout/header.php';
+include '../../layout/header.php';
 
 // ambil id yang dipilih
 $id_pengguna = (int)$_GET['id_pengguna'];
@@ -15,17 +15,45 @@ $id_pengguna = (int)$_GET['id_pengguna'];
 $data_pengguna = select("SELECT * FROM tb_pengguna WHERE id_pengguna = $id_pengguna")[0];
 
 // ==================== FUNGSI TOMBOL SIMPAN ==================== 
+// if (isset($_POST['ubah'])) {
+//     if (ubah_pengguna($_POST) > 0) {
+//         $_SESSION['info'] = 'Berhasil Ubah';
+//         echo    "<script>
+//                     document.location.href = 'pengguna-data.php';
+//                 </script>";
+//     } else {
+//         $_SESSION['info'] = 'Gagal Ubah';
+//         echo    "<script>
+//                     document.location.href = 'pengguna-data.php';
+//                 </script>";
+//     }
+// }
+
 if (isset($_POST['ubah'])) {
     if (ubah_pengguna($_POST) > 0) {
         $_SESSION['info'] = 'Berhasil Ubah';
-        echo    "<script>
-                    document.location.href = 'pengguna-data.php';
-                </script>";
+
+        if ($_SESSION['level'] == 1) {
+            echo    "<script>
+                        document.location.href = 'pengguna-data.php';
+                    </script>";
+        } else {
+            echo    "<script>
+                        document.location.href = 'pengguna-lihat.php';
+                    </script>";
+        }
     } else {
         $_SESSION['info'] = 'Gagal Ubah';
-        echo    "<script>
-                    document.location.href = 'pengguna-data.php';
-                </script>";
+
+        if ($_SESSION['level'] == 1) {
+            echo    "<script>
+                        document.location.href = 'pengguna-data.php';
+                    </script>";
+        } else {
+            echo    "<script>
+                        document.location.href = 'pengguna-lihat.php';
+                    </script>";
+        }
     }
 }
 
@@ -135,5 +163,5 @@ if (isset($_POST['ubah'])) {
 
 <?php
 // ==================== MENAMPILKAN FOOTER ====================
-include 'layout/footer.php';
+include '../../layout/footer.php';
 ?>

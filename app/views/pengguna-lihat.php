@@ -6,28 +6,10 @@ session_start();
 $judul_halaman = "Pengguna";
 
 // ==================== MENAMPILKAN HEADER ====================
-include 'layout/header.php';
+include '../../layout/header.php';
 
-// ==================== MENERIMA ID YANG DIPILIH ==================== 
-$id_pengguna = (int)$_GET['id_pengguna'];
-
-// ==================== QUERY AMBIL DAN TAMPILKAN DATA ==================== 
-$data_pengguna = select("SELECT * FROM tb_pengguna WHERE id_pengguna = $id_pengguna")[0];
-
-// ==================== FUNGSI TOMBOL SIMPAN ==================== 
-if (isset($_POST['ubah'])) {
-    if (ubah_pengguna($_POST) > 0) {
-        $_SESSION['info'] = 'Berhasil Ubah';
-        echo    "<script>
-                    document.location.href = 'pengguna-data.php';
-                </script>";
-    } else {
-        $_SESSION['info'] = 'Gagal Ubah';
-        echo    "<script>
-                    document.location.href = 'pengguna-data.php';
-                </script>";
-    }
-}
+// ==================== FUNGSI MENAMPILKAN DATA DARI DATABASE ====================
+$data_pengguna = select("SELECT * FROM tb_pengguna");
 
 ?>
 
@@ -68,10 +50,10 @@ if (isset($_POST['ubah'])) {
 
                         <div class="card-body box-profile">
                             <div class="text-center">
-                                <img class="profile-user-img img-fluid img-circle" src="admin/dist/img/profile.png" alt="User profile picture">
+                                <img class="profile-user-img img-fluid img-circle" src="../../admin/dist/img/profile.png" alt="User profile picture">
                             </div>
-                            <h3 class="profile-username text-center"> <?= $data_pengguna['nama_akun']; ?> </h3>
-                            <p class="text-muted text-center"> <?php if ($data_pengguna['level'] == 1) {
+                            <h3 class="profile-username text-center"> <?= $_SESSION['nama_akun']; ?> </h3>
+                            <p class="text-muted text-center"> <?php if ($_SESSION['level'] == 1) {
                                                                     echo "Administrator";
                                                                 } else {
                                                                     echo "User";
@@ -85,7 +67,7 @@ if (isset($_POST['ubah'])) {
                                     <b>Jabatan</b> <a class="float-right">543</a>
                                 </li>
                             </ul>
-                            <a href="pengguna-ubah.php?id_pengguna=<?= $data_pengguna['id_pengguna']; ?>" class="btn btn-primary btn-block"><b>PENGATURAN</b></a>
+                            <a href="pengguna-ubah.php?id_pengguna=<?= $_SESSION['id_pengguna']; ?>" class="btn btn-primary btn-block"><b>PENGATURAN</b></a>
                         </div>
 
                     </div>
@@ -242,5 +224,5 @@ if (isset($_POST['ubah'])) {
 
 <?php
 // ==================== MENAMPILKAN FOOTER ====================
-include 'layout/footer.php';
+include '../../layout/footer.php';
 ?>

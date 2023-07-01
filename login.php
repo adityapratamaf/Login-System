@@ -28,7 +28,7 @@ if (isset($_POST['login'])) {
             $_SESSION['level']          = $hasil['level'];
 
             // Jika Data Login Benar Maka Diarahkan Ke Halaman
-            header("Location: dashboard.php");
+            header("Location: app/views/dashboard.php");
             exit();
         }
     }
