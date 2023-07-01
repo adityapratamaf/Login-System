@@ -32,11 +32,11 @@ if (isset($_POST['tambah'])) {
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
+            <div class="row mb-1">
+                <!-- <div class="col-sm-6">
                     <h1>Pengguna</h1>
-                </div>
-                <div class="col-sm-6">
+                </div> -->
+                <div class="col-sm-12">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Menu</a></li>
                         <li class="breadcrumb-item"><a href="#">Pengguna</a></li>

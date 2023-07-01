@@ -203,7 +203,7 @@ include '../../config/app.php';
                     <ul class="dropdown-menu">
                         <a class="dropdown-item" href="pengguna-lihat.php?id_pengguna=<?= $_SESSION['id_pengguna']; ?>"> <i class="fas fa-user"></i> &nbsp; Profil</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"> <i class="nav-icon fas fa-sign-out-alt"></i> &nbsp; Keluar</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-logout"> <i class="nav-icon fas fa-sign-out-alt"></i> &nbsp; Keluar</a>
                     </ul>
                 </li>
 
