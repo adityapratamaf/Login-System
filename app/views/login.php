@@ -2,7 +2,7 @@
 
 session_start();
 
-include 'config/app.php';
+include '../../config/app.php';
 
 // ==================== AUTENTIKASI LOGIN ====================
 // Fungsi Tombol Login
@@ -28,7 +28,7 @@ if (isset($_POST['login'])) {
             $_SESSION['level']          = $hasil['level'];
 
             // Jika Data Login Benar Maka Diarahkan Ke Halaman
-            header("Location: app/views/dashboard.php");
+            header("Location: dashboard.php");
             exit();
         }
     }
@@ -52,11 +52,11 @@ if (isset($_POST['login'])) {
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="admin/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../admin/plugins/fontawesome-free/css/all.min.css">
     <!-- icheck bootstrap -->
-    <link rel="stylesheet" href="admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="../../admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="admin/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="../../admin/dist/css/adminlte.min.css">
 </head>
 
 <body class="hold-transition login-page">
@@ -124,11 +124,11 @@ if (isset($_POST['login'])) {
     <!-- /.login-box -->
 
     <!-- jQuery -->
-    <script src="admin/plugins/jquery/jquery.min.js"></script>
+    <script src="../../admin/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
-    <script src="admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="admin/dist/js/adminlte.min.js"></script>
+    <script src="../../admin/dist/js/adminlte.min.js"></script>
     <!-- Tampilkan Password -->
     <script type="text/javascript">
         function myFunction() {

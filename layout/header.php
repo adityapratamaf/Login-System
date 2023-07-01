@@ -237,7 +237,7 @@ include '../../config/app.php';
                     </div> -->
                     <div class="modal-footer justify-content-between">
                         <button type="button" class="btn btn-default" data-dismiss="modal"> <b>TIDAK</b> </button>
-                        <a href="../../logout.php" type="button" class="btn btn-primary"> <b>YA</b></a>
+                        <a href="logout.php" type="button" class="btn btn-primary"> <b>YA</b></a>
                     </div>
                 </div>
                 <!-- /.modal-content -->
